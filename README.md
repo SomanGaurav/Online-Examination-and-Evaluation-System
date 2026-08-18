@@ -89,8 +89,3 @@ Everything's under `/api`, everything except `/auth/register` and `/auth/login` 
 - `GET /reports/exams/:id/export.pdf` / `export.csv`
 - `GET /reports/exams/:id/students/:sid/report.pdf`
 
-## A couple of implementation notes
-
-- The bulk grade endpoint uses Mongo's `bulkWrite` with `ordered: false` — if one row in a 100-submission batch is malformed it gets reported back individually instead of taking down the whole save.
-- The live dashboard uses a plain Node `EventEmitter` in-process to fan out SSE updates. That's fine for one server instance; if this ever needed to run behind a load balancer with multiple instances, that emitter would need to become something shared like Redis pub/sub instead.
-- Didn't add any automated tests — if you're picking this up, that'd be the first thing I'd add before changing the grading logic.
