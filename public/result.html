@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Result · ExamEval</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="topbar" id="topbar"></header>
+
+  <main>
+    <div class="page-head">
+      <div>
+        <h1 id="examTitle">Loading…</h1>
+        <p class="muted small" id="examMeta"></p>
+      </div>
+      <div class="row">
+        <button class="btn btn-secondary" id="pdfBtn">Download PDF</button>
+      </div>
+    </div>
+
+    <div class="grid grid-4" id="stats"></div>
+
+    <section class="card" style="margin-top:1rem">
+      <div class="card-head"><h2>Answer sheet</h2></div>
+      <div id="answers"></div>
+    </section>
+  </main>
+
+  <script type="module" src="/js/result.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My dashboard · ExamEval</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="topbar" id="topbar"></header>
+
+  <main>
+    <div class="page-head">
+      <div>
+        <h1>My dashboard</h1>
+        <p class="muted small">Open assessments and released results</p>
+      </div>
+    </div>
+
+    <div class="grid grid-4" id="stats"></div>
+
+    <div class="stack" style="margin-top:1rem">
+      <section class="card">
+        <div class="card-head"><h2>Available examinations</h2></div>
+        <div id="examList"><p class="muted small">Loading…</p></div>
+      </section>
+
+      <section class="card">
+        <div class="card-head"><h2>My results</h2></div>
+        <div class="table-wrap" id="resultList"><p class="muted small">Loading…</p></div>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="/js/student.js"></script>
+</body>
+</html>

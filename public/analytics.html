@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Analytics · ExamEval</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="topbar" id="topbar"></header>
+
+  <main>
+    <div class="page-head">
+      <div>
+        <h1 id="examTitle">Loading…</h1>
+        <p class="muted small"><span class="live-dot" id="liveDot"></span><span id="liveState">connecting…</span></p>
+      </div>
+      <div class="row">
+        <button class="btn btn-secondary" id="csvBtn">Export CSV</button>
+        <button class="btn btn-secondary" id="pdfBtn">Export PDF report</button>
+      </div>
+    </div>
+
+    <div class="grid grid-4" id="stats"></div>
+
+    <div class="grid grid-2" style="margin-top:1rem">
+      <section class="card">
+        <div class="card-head"><h2>Score distribution</h2></div>
+        <div class="bars" id="distChart"></div>
+      </section>
+
+      <section class="card">
+        <div class="card-head"><h2>Topic-wise accuracy</h2></div>
+        <div id="topicList"></div>
+      </section>
+    </div>
+
+    <section class="card" style="margin-top:1rem">
+      <div class="card-head"><h2>Question difficulty</h2></div>
+      <div class="table-wrap" id="questionTable"></div>
+    </section>
+
+    <section class="card" style="margin-top:1rem">
+      <div class="card-head"><h2>Leaderboard</h2></div>
+      <div class="table-wrap" id="leaderboard"></div>
+    </section>
+  </main>
+
+  <script type="module" src="/js/analytics.js"></script>
+</body>
+</html>

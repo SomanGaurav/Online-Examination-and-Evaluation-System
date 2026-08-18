@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Attempt exam · ExamEval</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="topbar" id="topbar"></header>
+
+  <main>
+    <div class="page-head">
+      <div>
+        <h1 id="examTitle">Loading…</h1>
+        <p class="muted small" id="examMeta"></p>
+      </div>
+      <div class="right">
+        <div class="stat-label">Time remaining</div>
+        <div class="timer" id="timer">--:--</div>
+        <div class="small muted" id="saveState">&nbsp;</div>
+      </div>
+    </div>
+
+    <div class="exam-shell">
+      <aside class="card">
+        <h3>Question palette</h3>
+        <div class="palette" id="palette"></div>
+        <p class="small muted" style="margin-top:.75rem" id="progressText"></p>
+        <button class="btn" style="width:100%; justify-content:center; margin-top:.5rem" id="finishBtn">
+          Submit exam
+        </button>
+      </aside>
+
+      <section class="card" id="questionHost">
+        <p class="muted small">Loading questions…</p>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="/js/exam.js"></script>
+</body>
+</html>

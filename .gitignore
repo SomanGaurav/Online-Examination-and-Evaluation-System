@@ -1,0 +1,10 @@
+node_modules/
+.env
+.env.local
+npm-debug.log*
+yarn-error.log*
+coverage/
+tmp/
+exports/
+.DS_Store
+*.swp

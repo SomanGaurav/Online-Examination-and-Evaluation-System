@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grading console · ExamEval</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="topbar" id="topbar"></header>
+
+  <main>
+    <div class="page-head">
+      <div>
+        <h1 id="examTitle">Loading…</h1>
+        <p class="muted small" id="examMeta"></p>
+      </div>
+      <div class="row">
+        <button class="btn btn-secondary" id="rerunAutoBtn">Re-run auto-grade</button>
+        <button class="btn btn-secondary" id="publishBtn">Publish results</button>
+      </div>
+    </div>
+
+    <div class="grid grid-4" id="stats"></div>
+
+    <section class="card" style="margin-top:1rem">
+      <div class="card-head">
+        <h2>Grade question-by-question</h2>
+        <select id="questionSelect"></select>
+      </div>
+      <p class="small muted">
+        Grading one question across every submission is faster than opening scripts one at a time.
+        Enter marks for each response, then save the whole batch in a single request.
+      </p>
+      <div class="row" style="margin:.5rem 0">
+        <label class="inline-field" style="width:auto">
+          <input type="checkbox" id="pendingOnlyToggle" checked style="width:auto" />
+          <span>Show pending only</span>
+        </label>
+        <button class="btn btn-sm btn-secondary" id="applyToAllBtn">Apply first mark to all blank rows</button>
+      </div>
+      <div id="queueHost"><p class="muted small">Select a question…</p></div>
+
+      <div class="sticky-actions" id="batchBar" hidden>
+        <span id="batchSummary" class="small muted"></span>
+        <div class="row">
+          <button class="btn btn-secondary" id="saveDraftBtn">Save marks</button>
+          <button class="btn" id="saveAndPublishBtn">Save &amp; publish these</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="/js/grading.js"></script>
+</body>
+</html>

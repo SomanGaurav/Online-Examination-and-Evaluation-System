@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Teacher dashboard · ExamEval</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="topbar" id="topbar"></header>
+
+  <main>
+    <div class="page-head">
+      <div>
+        <h1>My examinations</h1>
+        <p class="muted small">Create exams, manage question banks, and track grading progress</p>
+      </div>
+      <button class="btn" id="newExamBtn">+ New exam</button>
+    </div>
+
+    <div class="table-wrap card" id="examList">
+      <p class="muted small">Loading…</p>
+    </div>
+  </main>
+
+  <dialog id="newExamDialog" style="border:none; border-radius:12px; padding:0; width:min(480px, 92vw)">
+    <form method="dialog" class="card" id="newExamForm" style="box-shadow:none; border:none">
+      <h2>Create examination</h2>
+      <div class="field">
+        <label for="feTitle">Title</label>
+        <input id="feTitle" required />
+      </div>
+      <div class="field">
+        <label for="feSubject">Subject</label>
+        <input id="feSubject" required />
+      </div>
+      <div class="field">
+        <label for="feDescription">Description</label>
+        <textarea id="feDescription"></textarea>
+      </div>
+      <div class="row">
+        <div class="field" style="flex:1">
+          <label for="feDuration">Duration (minutes)</label>
+          <input id="feDuration" type="number" min="1" value="60" required />
+        </div>
+        <div class="field" style="flex:1">
+          <label for="fePassing">Passing marks</label>
+          <input id="fePassing" type="number" min="0" value="0" />
+        </div>
+      </div>
+      <div class="row" style="justify-content:flex-end; margin-top:.5rem">
+        <button type="button" class="btn btn-secondary" id="cancelNewExam">Cancel</button>
+        <button type="submit" class="btn">Create</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script type="module" src="/js/teacher.js"></script>
+</body>
+</html>
